@@ -2,6 +2,9 @@
 - hosts: thoughtworks
   sudo: yes
   tasks:
+    - name: platform update
+       apt:
+         update_cache=yes
     - name: install make
       apt: pkg=make state=installed update_cache=true
     - name: Installs git
